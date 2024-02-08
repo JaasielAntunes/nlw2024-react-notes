@@ -61,7 +61,7 @@ export function App() {
   return (
     <div className="mx-auto max-w-6xl my-12 space-y-6 px-5">
       <div className="flex justify-center items-center">
-        <img className="" src={logo} alt="NLW Expert Notas" />
+        <img width={170} src={logo} alt="NLW Expert Notas" />
       </div>
 
       <form className="w-full pt-7">
