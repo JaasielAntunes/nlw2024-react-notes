@@ -2,6 +2,7 @@ import { ChangeEvent, useState } from 'react';
 import logo from './assets/logo-nlw-expert.svg';
 import { NewNoteCard } from './components/new-note-card';
 import { NoteCard } from './components/note-card';
+import { toast } from "sonner";
 
 interface Note {
   id: string;
@@ -21,7 +22,7 @@ export function App() {
     return [];
   });
 
-  function onNoteCreated(content: string) {
+  function noteCreated(content: string) {
     const newNote = {
       id: crypto.randomUUID(),
       date: new Date(),
@@ -33,6 +34,16 @@ export function App() {
     setNotes(notesArray);
 
     localStorage.setItem("notes", JSON.stringify(notesArray));
+  }
+
+  function noteDeleted(id: string) {
+    const notesArray = notes.filter((note) => {
+      return note.id !== id;
+    });
+
+    setNotes(notesArray);
+    localStorage.setItem("notes", JSON.stringify(notesArray));
+    toast.success("Nota apagada com sucesso!");
   }
 
   function handleSearch(e: ChangeEvent<HTMLInputElement>) {
@@ -65,11 +76,11 @@ export function App() {
       <div className="h-px bg-violet-800" />
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 auto-rows-[250px]">
-        <NewNoteCard onNoteCreated={onNoteCreated} />
+        <NewNoteCard noteCreated={noteCreated} />
 
         {filteredNotes.map((note) => {
           return (
-            <NoteCard key={note.id} note={note} />
+            <NoteCard noteDeleted={noteDeleted} key={note.id} note={note} />
           );
         })}
       </div>

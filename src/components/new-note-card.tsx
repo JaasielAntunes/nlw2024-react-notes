@@ -4,10 +4,10 @@ import { ChangeEvent, FormEvent, useState } from "react";
 import { toast } from "sonner";
 
 interface NewNoteCardProps {
-  onNoteCreated: (content: string) => void;
+  noteCreated: (content: string) => void;
 }
 
-export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
+export function NewNoteCard({ noteCreated }: NewNoteCardProps) {
   const [shouldShowOnboarding, setShouldShowOnboarding] = useState(true);
   const [content, setContent] = useState("");
 
@@ -25,7 +25,7 @@ export function NewNoteCard({ onNoteCreated }: NewNoteCardProps) {
 
   function handleSaveNote(event: FormEvent) {
     event.preventDefault();
-    onNoteCreated(content);
+    noteCreated(content);
     setContent("");
     setShouldShowOnboarding(true);
     toast.success("Nota criada com sucesso!");
