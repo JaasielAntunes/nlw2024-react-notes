@@ -7,9 +7,14 @@ interface NewNoteCardProps {
   noteCreated: (content: string) => void;
 }
 
+const SpeechRecognitionAPI =
+  window.SpeechRecognition || window.webkitSpeechRecognition;
+
+const speechRecognition = new SpeechRecognitionAPI();
+
 export function NewNoteCard({ noteCreated }: NewNoteCardProps) {
   const [shouldShowOnboarding, setShouldShowOnboarding] = useState(true);
-  const [isRecording, setIsReacording] = useState(false);
+  const [isRecording, setIsRecording] = useState(false);
   const [content, setContent] = useState("");
 
   function handleStartEditor() {
@@ -39,11 +44,43 @@ export function NewNoteCard({ noteCreated }: NewNoteCardProps) {
   }
 
   function handleStartRecording() {
-    setIsReacording(true);
+    const isSpeechRecognitionAPIAvailable =
+      "SpeechRecognition" in window || "webkitSpeechRecognition" in window;
+
+    if (!isSpeechRecognitionAPIAvailable) {
+      alert("Seu navegador não suporta a API de gravação!");
+      return;
+    }
+
+    setIsRecording(true);
+    setShouldShowOnboarding(false);
+
+    speechRecognition.lang = "pt-BR";
+    speechRecognition.continuous = true;
+    speechRecognition.maxAlternatives = 1;
+    speechRecognition.interimResults = true;
+
+    speechRecognition.onresult = (e) => {
+      const transcription = Array.from(e.results).reduce((text, result) => {
+        return text.concat(result[0].transcript);
+      }, "");
+
+      setContent(transcription);
+    };
+
+    speechRecognition.onerror = (e) => {
+      console.error(e);
+    };
+
+    speechRecognition.start();
   }
 
-  function handleStopRecording() {
-    setIsReacording(false);
+  function handleCancelRecording() {
+    setIsRecording(false);
+
+    if (speechRecognition !== null) {
+      speechRecognition.stop();
+    }
   }
 
   return (
@@ -68,7 +105,7 @@ export function NewNoteCard({ noteCreated }: NewNoteCardProps) {
 
           <form className="flex-1 flex flex-col">
             <div className="flex flex-1 flex-col gap-3 p-5">
-              <span className="text-sm font-medium text-slate-300">
+              <span className="text-sm font-medium text-slate-200">
                 Adicionar nota
               </span>
 
@@ -90,8 +127,9 @@ export function NewNoteCard({ noteCreated }: NewNoteCardProps) {
                 </p>
               ) : (
                 <textarea
+                  maxLength={360}
                   autoFocus
-                  className="text-sm leading-6 text-slate-400 bg-transparent resize-none flex-1 outline-none"
+                  className="text-sm leading-6 text-slate-300 bg-transparent resize-none flex-1 outline-none"
                   onChange={handleContentChanged}
                   value={content}
                 />
@@ -101,7 +139,7 @@ export function NewNoteCard({ noteCreated }: NewNoteCardProps) {
             {isRecording ? (
               <button
                 type="button"
-                onClick={handleStopRecording}
+                onClick={handleCancelRecording}
                 className="w-full flex items-center justify-center gap-2 bg-slate-900 py-4 text-center text-sm text-slate-300 outline-none font-medium hover:text-slate-100"
               >
                 <div className="size-3 rounded-full bg-red-500 animate-pulse" />
