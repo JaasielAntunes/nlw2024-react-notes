@@ -14,7 +14,12 @@ export function NoteCard({ note }: NoteCardProps) {
   return (
     <Dialog.Root>
       <Dialog.Trigger className="rounded-md text-left bg-slate-800 flex flex-col p-5 gap-3 overflow-hidden relative hover:ring-2 hover:ring-slate-600 focus-visible:ring-2 focus-visible:ring-violet-500 outline-none">
-        <span className="text-sm font-medium text-slate-300">{note.date.toISOString()}</span>
+        <span className="text-sm font-medium text-slate-300">
+          {formatDistanceToNow(note.date, {
+            locale: ptBR,
+            addSuffix: true,
+          })}
+        </span>
         <p className="text-sm leading-4 text-slate-400">
           {note.content}
         </p>
