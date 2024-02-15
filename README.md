@@ -13,6 +13,11 @@ A aplicação possui uma interface simples, intuitiva e com responsividade.
 
 ---
 
+## 🔗 Link do projeto
+https://nlw-react-notes.netlify.app
+
+---
+
 ## Requisitos
 
 - Node.js versão 20 ou superior;
