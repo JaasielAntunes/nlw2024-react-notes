@@ -13,7 +13,7 @@ A aplicação possui uma interface simples, intuitiva e com responsividade.
 
 ---
 
-## Pré-requisitos
+## Requisitos
 
 - Node.js versão 20 ou superior;
 
