@@ -1,5 +1,5 @@
 <h1 align="center">
-  Aplicação Frontend desenvolvido durante a Trilha React no evento NLW Expert da Rocketseat em 2024.
+  Aplicação Frontend desenvolvida durante a Trilha React no evento NLW Expert da Rocketseat em 2024.
 </h1>
 
 [![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
