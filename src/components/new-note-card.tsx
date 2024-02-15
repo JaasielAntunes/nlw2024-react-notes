@@ -149,7 +149,7 @@ export function NewNoteCard({ noteCreated }: NewNoteCardProps) {
               <button
                 type="button"
                 onClick={handleSaveNote}
-                className="w-full bg-violet-600 py-4 text-center text-sm text-white outline-none font-medium hover:bg-lime-500"
+                className="w-full bg-violet-600 py-4 text-center text-sm text-white outline-none font-medium hover:bg-violet-600"
               >
                 Salvar nota
               </button>
