@@ -38,7 +38,7 @@ A aplicação possui uma interface simples, intuitiva e com responsividade.
 1. Clone o projeto:
 
 ```
-$ git clone https://github.com/JaasielAntunes/nlw2024-react-notes
+$ git clone https://github.com/JaasielAntunes/nlw2024-react-notes.git
 ```
 
 2. Acesse a pasta do projeto:
