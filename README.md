@@ -44,7 +44,7 @@ $ git clone https://github.com/JaasielAntunes/nlw2024-react-notes
 2. Acesse a pasta do projeto:
 
 ```
-$ cd nlw-expert
+$ cd nlw2024-react-notes
 ```
 
 3. Instale as dependências:
