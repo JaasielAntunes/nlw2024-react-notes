@@ -67,7 +67,7 @@ $ npm run dev
 ---
 
 ## ✅ Sugestão
-- Utilize o Postman ou Insomnia para testar as requisições.
+- Utilize o Postman ou Insomnia para realizar as requisições.
 ---
 
 <h4 align="center">
