@@ -2,7 +2,9 @@
   Aplicação Frontend desenvolvida durante a Trilha React no evento NLW Expert da Rocketseat em 2024.
 </h1>
 
-[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+<p align="center">
+  <a href="LICENSE"><img  src="https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge" alt="License"></a>
+</p>
 
 ---
 
