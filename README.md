@@ -11,7 +11,8 @@
 ## 📁 Sobre o projeto
 
 Aprofundando os conhecimentos com a tecnologia React configurando e desenvolvendo um projeto completo do zero de notas de áudio que se convertem em texto.
-A aplicação possui uma interface simples, intuitiva e com responsividade.
+A aplicação possui uma interface simples, intuitiva, com responsividade e consiste em salvar notas através de gravação de áudio ou por digitação de texto,
+também é possível buscar e deletar notas.
 
 ---
 
