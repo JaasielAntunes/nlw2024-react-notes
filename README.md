@@ -69,16 +69,12 @@ $ npm run dev
 
 ---
 
-## ✅ Sugestão
-- Utilize o Postman ou Insomnia para realizar as requisições.
----
-
 <h4 align="center">
-  Feito com ❤️ por Jaasiel Antunes - <a href="mailto:contato.jaasiel@gmail.com.com">Entre em contato!</a>
+  Feito com ❤️ por Jaasiel Antunes - <a href="mailto:contato.jaasiel@gmail.com.com">Entre em contato</a>
 </h4>
 
 <p align="center">
-  <a href="https://www.linkedin.com/in/jaasiel-antunes-1517b41bb/">
+  <a href="https://www.linkedin.com/in/jaasiel-antunes-1517b41bb">
     <img alt="Jaasiel Antunes" src="https://img.shields.io/badge/LinkedIn-Jaasiel-0e76a8?style=flat&logoColor=white&logo=linkedin">
   </a>
 </p>
