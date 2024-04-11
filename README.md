@@ -27,7 +27,7 @@ https://nlw-react-notes.netlify.app
 
 ---
 
-## 💻 Tecnologias utilizadas
+## 💻 Tecnologias
 
 - React e React-DOM
 - Date-fns
