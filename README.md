@@ -23,7 +23,7 @@ https://nlw-react-notes.netlify.app
 
 ## Requisitos
 
-- Node.js versão 20 ou superior;
+- Node.js versão 20 ou superior
 
 ---
 
