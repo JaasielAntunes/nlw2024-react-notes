@@ -32,6 +32,7 @@ https://nlw-react-notes.netlify.app
 - React e React-DOM
 - Date-fns
 - Tailwind CSS
+- JavaScript
 - TypeScript
 - Vite
 - PostCSS
