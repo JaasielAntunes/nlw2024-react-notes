@@ -1,5 +1,5 @@
 <h1 align="center">
-  Aplicação Frontend desenvolvida durante a Trilha React no evento NLW Expert da <a href="https://app.rocketseat.com.br/home">Rocketseat</a>.
+  Aplicação Front-end desenvolvida durante a Trilha React no evento NLW Expert da <a href="https://app.rocketseat.com.br/home">Rocketseat</a>.
 </h1>
 
 <p align="center">
