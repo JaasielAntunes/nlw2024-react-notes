@@ -62,7 +62,7 @@ $ cd nlw2024-react-notes
 $ npm install
 ```
 
-4. Inicie o servidor:
+4. Inicie a aplicação:
 
 ```
 $ npm run dev
