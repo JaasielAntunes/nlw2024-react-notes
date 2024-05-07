@@ -16,7 +16,7 @@ também é possível buscar e deletar notas.
 
 ---
 
-## 🔗 Link do projeto
+## 🔗 Deploy
 https://nlw-react-notes.netlify.app
 
 ---
